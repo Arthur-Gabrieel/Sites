@@ -1,0 +1,132 @@
+ body { 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+ }
+
+#top { 
+    position: absolute; 
+    width: 100%;
+    height: 50px;
+    background-color: rgb(196, 69, 11);
+    text-align: center;
+    top: 0;
+}
+
+#title {
+    color: white;
+}
+
+#title2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: calc(50vh - 60px);
+     margin: 0 auto; 
+     width: 100%;
+}
+
+#centro {
+    width: 100%;
+    height: calc(50vh); /* metade da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sessao {
+    display: flex;
+    gap: 20px; /* espaço entre os blocos */
+    justify-content: center; /* centraliza todos no centro do container */
+    align-items: center;
+}
+
+.noticia1 {
+    width: 90vw;
+    max-width: 520px;
+    height: 360px;;
+    background-color: rgb(207, 202, 202);
+    border: 2px solid gray;
+    display: flex; /* agora sim! */
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    
+}
+.noticia1 img {
+  width: 100%;
+  height: 70%; /* imagem ocupa 70% da altura */
+  object-fit: cover;
+}
+.descricao {
+  background-color: white;
+  height: 30%; /* ocupa 30% da altura */
+  padding: 10px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border-top: 2px solid gray;
+  
+}
+
+.tituloNoticia {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.resumoNoticia {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1; /* faz o parágrafo ocupar o espaço disponível */
+}
+
+#botao-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.saibaMais {
+      padding: 6px 15px;
+      border: none;
+      background-color: rgb(196, 69, 11);
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 0;
+      position: relative;
+      bottom: 15px; /* sobe 10px */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    
+
+    #sessao {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .noticia1 {
+        width: 90vw;              /* 90% da largura da viewport */
+        max-width: 520px;         /* não fica maior que 520px */
+        height: 300px; 
+    }
+}
+
+#final {
+    position: absolute;
+    bottom: 0;
+}
