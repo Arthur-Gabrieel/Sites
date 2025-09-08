@@ -1,4 +1,4 @@
- body { 
+body { 
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -10,13 +10,29 @@
     position: absolute; 
     width: 100%;
     height: 50px;
-    background-color: rgb(196, 69, 11);
+    background-color: #0871ad;
     text-align: center;
     top: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
-#title {
+#logoBasket {               /*Logo do site*/
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    padding-left:10px;
+}
+.link_top{
+    margin-top: 20px;
+    margin-right: 40px;
     color: white;
+    text-decoration: none;
+}
+
+.link_top:hover{
+    color: rgb(179, 175, 175);
+    border-bottom: 5px solid rgb(119, 112, 112);
 }
 
 #title2 {
@@ -26,21 +42,26 @@
      height: calc(50vh - 60px);
      margin: 0 auto; 
      width: 100%;
+     color: rgb(119, 112, 112);
+     font-family: sans-serif;
 }
-
+                                /*-------COMEÇO DAS NOTÍCIAS---------*/
 #centro {
     width: 100%;
-    height: calc(50vh); /* metade da tela */
+    height: auto; /* metade da tela */
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
-#sessao {
+.sessao {
     display: flex;
     gap: 20px; /* espaço entre os blocos */
     justify-content: center; /* centraliza todos no centro do container */
     align-items: center;
+    margin-top: 20px;
 }
 
 .noticia1 {
@@ -57,40 +78,112 @@
     overflow: hidden;
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     display: flex;
-    
+    font-family: sans-serif;
 }
+
+.noticia2 {
+    width: 90vw;
+    max-width: 520px;
+    height: 360px;;
+    background-color: rgb(207, 202, 202);
+    border: 2px solid gray;
+    display: flex; /* agora sim! */
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    font-family: sans-serif;
+}
+
+.noticia3 {
+    width: 90vw;
+    max-width: 520px;
+    height: 360px;;
+    background-color: rgb(207, 202, 202);
+    border: 2px solid gray;
+    display: flex; /* agora sim! */
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    font-family: sans-serif;
+}
+
+.noticia4 {
+    width: 90vw;
+    max-width: 520px;
+    height: 360px;;
+    background-color: rgb(207, 202, 202);
+    border: 2px solid gray;
+    display: flex; /* agora sim! */
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    display: flex;
+    font-family: sans-serif;
+}
+                                        /*CONFIGURAÇÃO DAS IMAGENS*/
 .noticia1 img {
   width: 100%;
   height: 70%; /* imagem ocupa 70% da altura */
   object-fit: cover;
 }
+
+.noticia2 img {
+  width: 100%;
+  height: 70%; 
+  object-fit: cover;
+}
+.noticia3 img {
+  width: 100%;
+  height: 70%; 
+  object-fit: cover;
+}
+.noticia4 img {
+  width: 100%;
+  height: 70%; 
+  object-fit: cover;
+}
+                        /*CONFIGURAÇÃO DA DESCRIÇÃO, TÍTULO PARÁGRAFO E BOTÃO*/
 .descricao {
   background-color: white;
-  height: 30%; /* ocupa 30% da altura */
+  height: 30%;
+  overflow-y: auto;
   padding: 10px 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
   border-top: 2px solid gray;
+  position: relative;
+  
   
 }
 
 .tituloNoticia {
   margin: 0;
   font-size: 1.2rem;
-  color: #333;
+  color: rgb(24, 23, 23);
+  font-family: sans-serif;
 }
 
 .resumoNoticia {
   margin: 0;
   font-size: 1rem;
   color: #555;
-  flex-grow: 1; /* faz o parágrafo ocupar o espaço disponível */
+  
 }
-
-#botao-container {
+.botao-container {
     display: flex;
     width: 100%;
     justify-content: flex-end;
@@ -98,21 +191,84 @@
 .saibaMais {
       padding: 6px 15px;
       border: none;
-      background-color: rgb(196, 69, 11);
+      background-color: #0871ad;
       color: white;
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-bottom: 0;
-      position: relative;
-      bottom: 15px; /* sobe 10px */
+      transition: background-color 0.3s ease;  
 }
+
+.saibaMais {
+  transition: transform 0.2s ease;
+}
+.saibaMais:hover {
+      padding: 6px 15px;
+      border: none;
+      background-color: #05a3ff;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;  
+}
+
+.pulando {
+  transform: scale(1.2); /* aumenta 20% */
+}  
+                    /*configurações das modais*/
+.modal {
+  display: none; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vh; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 999; 
+  overflow-y: auto;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%; /* responsivo */
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.buttonClose {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.buttonClose {
+  color: red;
+}
+
+.modalContent img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 15px auto;
+  border-radius: 8px;
+  
+}
+                                                    /*-------FIM DAS NOTÍCIAS---------*/
 
 /* Responsividade para telas pequenas */
 @media (max-width: 768px) {
     
-
     #sessao {
         flex-direction: column;
         align-items: center;
@@ -127,6 +283,21 @@
 }
 
 #final {
-    position: absolute;
-    bottom: 0;
+  margin-top: 20px;
+  bottom: 0; /* também pode remover */
+  background-color: #0871ad; /* exemplo */
+  padding: 20px;
+  text-align: center;
+}
+
+#termos {
+  text-decoration: none;
+  color: white;
+ 
+}
+
+#termos:hover{
+  text-decoration: none;
+  color: rgb(179, 175, 175);
+  
 }
