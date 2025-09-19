@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário de Basquete</title>
+  <style>
+   body { 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+ }
+
+    .calendario {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 100px;
+    }
+
+    .calendario-header {
+      background: #0871ad;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .calendario-grade {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1px;
+      background: #ccc;
+    }
+
+    .dia-nome,
+    .dia {
+      background: #42aeec;
+      padding: 15px;
+      text-align: center;
+
+    }
+
+    .dia-nome {
+      font-weight: bold;
+      background: #eee;
+    }
+
+    .evento {
+      margin-top: 5px;
+      padding: 3px;
+      font-size: 0.8em;
+      border-radius: 4px;
+      color: #fff;
+      background: #0871ad;
+    }
+
+    .tamanho {
+      width: 90px;
+    }
+
+    #top { 
+    position: absolute; 
+    width: 100%;
+    height: 50px;
+    background-color: #0871ad;
+    text-align: center;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logoBasket {               /*Logo do site*/
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    padding-left:10px;
+    margin-top: -24px;
+}
+.link_top{
+    margin-top: 20px;
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.link_top:hover{
+    color: rgb(179, 175, 175);
+    border-bottom: 5px solid rgb(119, 112, 112);
+}
+
+#title2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: calc(50vh - 60px);
+     margin: 0 auto; 
+     width: 100%;
+     color: rgb(119, 112, 112);
+     font-family: sans-serif;
+}
+  </style>
+</head>
+
+<body>
+
+  <header id="top">
+    <img  id="logoBasket" src="img/LOGO.png" alt="Logo">
+
+    <!-- Links do topo da pagina -->
+    <a class="link_top" href="index.html">Notícias</a>
+    <a class="link_top" href="calendario.html">Calendário</a>
+    <a class="link_top" href="classificação.html">Classificação</a>
+    <a class="link_top" href="times.html">Times</a>
+  
+</header>
+
+
+  <div class="calendario">
+    <div class="calendario-header">Setembro 2025</div>
+    <div class="calendario-grade">
+      <div class="dia-nome">Dom</div>
+      <div class="dia-nome">Seg</div>
+      <div class="dia-nome">Ter</div>
+      <div class="dia-nome">Qua</div>
+      <div class="dia-nome">Qui</div>
+      <div class="dia-nome">Sex</div>
+      <div class="dia-nome">Sáb</div>
+
+
+      <div class="dia"></div>
+      <div class="dia">1
+        <div class="evento">Treino especial</div>
+      </div>
+      <div class="dia">2</div>
+      <div class="dia">3</div>
+      <div class="dia">4</div>
+      <div class="dia">5
+        <img class="tamanho" src="img/WhatsApp Image 2025-09-08 at 23.50.11.jpeg" alt="">
+      </div>
+      <div class="dia">6</div>
+
+      <div class="dia">7</div>
+      <div class="dia">8
+        <img class="tamanho" src="img/WhatsApp Image 2025-09-08 at 23.50.15 (2).jpeg" alt="">
+      </div>
+      <div class="dia">9</div>
+      <div class="dia">10</div>
+      <div class="dia">11</div>
+      <div class="dia">12
+        <div class="evento">Treino especial</div>
+      </div>
+      <div class="dia">13</div>
+
+      <div class="dia">14</div>
+      <div class="dia">15
+        <div class="evento">descanso</div>
+      </div>
+      <div class="dia">16</div>
+      <div class="dia">17
+        <img class="tamanho" src="img/lakers.jpeg" alt="">
+      </div>
+      <div class="dia">18</div>
+      <div class="dia">19</div>
+      <div class="dia">20
+        <div class="evento"></div>
+        <img class="tamanho" src="img/WhatsApp Image 2025-09-08 at 23.50.15 (1).jpeg" alt="">
+      </div>
+
+
+      <div class="dia">21
+        <div class="evento">dia internacional</div>
+      </div>
+      <div class="dia">22</div>
+      <div class="dia">23</div>
+      <div class="dia">24</div>
+      <div class="dia">25</div>
+      <div class="dia">26
+        <div class="evento">Feriado</div>
+      </div>
+      <div class="dia">27</div>
+      <div class="dia">28</div>
+      <div class="dia">29
+        <div class="evento">Ferias</div>
+      </div>
+      <div class="dia">30
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

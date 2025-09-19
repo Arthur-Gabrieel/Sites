@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificação do Campeonato de Basquete</title>
+  <style>
+    body { 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: sans-serif;
+ }
+
+    .grade {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 100px;
+    }
+
+    .cartao {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s;
+    }
+
+    .cartao:hover {
+      transform: translateY(-5px);
+    }
+
+    .cartao .posicao {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #0871ad;
+    }
+
+    .cartao img {
+      width: 60px;
+      height: 60px;
+      margin: 10px 0;
+    }
+
+    .cartao .nome-time {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .estatisticas {
+      text-align: left;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    .barra-container {
+      background: #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    .barra {
+      height: 15px;
+      background: #0650be85;
+      width: 0%;
+    }
+
+    .cartao.pos1 .barra {
+      background: rgb(255, 196, 0);
+    }
+
+    .cartao.pos2 .barra {
+      background: rgba(253, 238, 21, 0.945);
+    }
+
+    .cartao.pos3 .barra {
+      background: #ffe81ada;
+    }
+    header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#top { 
+    position: absolute; 
+    width: 100%;
+    height: 50px;
+    background-color: #0871ad;
+    text-align: center;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logoBasket {               /*Logo do site*/
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    padding-left:10px;
+    margin-top: -24px;
+}
+.link_top{
+    margin-top: 20px;
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.link_top:hover{
+    color: rgb(179, 175, 175);
+    border-bottom: 5px solid rgb(119, 112, 112);
+}
+
+#title2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: calc(50vh - 60px);
+     margin: 0 auto; 
+     width: 100%;
+     color: rgb(119, 112, 112);
+     font-family: sans-serif;
+}
+
+  </style>
+</head>
+
+<body>
+  <header id="top">
+    <img  id="logoBasket" src="img/LOGO.png" alt="Logo">
+
+    <!-- Links do topo da pagina -->
+    <a class="link_top" href="index.html">Notícias</a>
+    <a class="link_top" href="calendario.html">Calendário</a>
+    <a class="link_top" href="classificação.html">Classificação</a>
+    <a class="link_top" href="times.html">Times</a>
+  
+</header>
+  
+  <div class="grade">
+    <div class="cartao pos1">
+      <div class="posicao">1º</div>
+      <img src="img/chigago bulls.png" alt="Time A">
+      <div class="nome-time">Chicago
+        Bulls</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 10 | Derrotas: 2 | Pontos: 20</div>
+      <div class="barra-container">
+        <div class="barra" style="width:100%"></div>
+      </div>
+    </div>
+
+    <div class="cartao pos2">
+      <div class="posicao">2º</div>
+      <img src="img/lakers.png" alt="Time B">
+      <div class="nome-time">Los Angeles
+        Lakers</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 9 | Derrotas: 3 | Pontos: 18</div>
+      <div class="barra-container">
+        <div class="barra" style="width:90%"></div>
+      </div>
+    </div>
+
+    <div class="cartao pos3">
+      <div class="posicao">3º</div>
+      <img src="img/new york.png" alt="Time C">
+      <div class="nome-time">New York
+        Knicks</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 8 | Derrotas: 4 | Pontos: 16</div>
+      <div class="barra-container">
+        <div class="barra" style="width:80%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">4º</div>
+      <img src="img/Miami Heat.png" alt="Time D">
+      <div class="nome-time">Miami
+        Heat</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 7 | Derrotas: 5 | Pontos: 14</div>
+      <div class="barra-container">
+        <div class="barra" style="width:70%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">5º</div>
+      <img src="img/Orlando Magic.png" alt="Time E">
+      <div class="nome-time">Orlando
+        Magic</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 6 | Derrotas: 6 | Pontos: 12</div>
+      <div class="barra-container">
+        <div class="barra" style="width:60%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">6º</div>
+      <img src="img/toronto raptors.png" alt="Time F">
+      <div class="nome-time">Toronto
+        Raptors</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 5 | Derrotas: 7 | Pontos: 10</div>
+      <div class="barra-container">
+        <div class="barra" style="width:50%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">7º</div>
+      <img src="img/Atlanta Hawks.png" alt="Time G">
+      <div class="nome-time">Atlanta
+        Hawks</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 4 | Derrotas: 8 | Pontos: 8</div>
+      <div class="barra-container">
+        <div class="barra" style="width:40%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">8º</div>
+      <img src="img/New Orleans Pelicans.png" alt="Time H">
+      <div class="nome-time">New Orleans
+        Pelicans</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 3 | Derrotas: 9 | Pontos: 6</div>
+      <div class="barra-container">
+        <div class="barra" style="width:30%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">9º</div>
+      <img src="img/San Antonio Spurs.png" alt="Time I">
+      <div class="nome-time">San Antonio
+        Spurs</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 2 | Derrotas: 10 | Pontos: 4</div>
+      <div class="barra-container">
+        <div class="barra" style="width:20%"></div>
+      </div>
+    </div>
+
+    <div class="cartao">
+      <div class="posicao">10º</div>
+      <img src="img/Dallas Mavericks.png" alt="Time J">
+      <div class="nome-time">Dallas
+        Mavericks</div>
+      <div class="estatisticas">Jogos: 12 | Vitórias: 1 | Derrotas: 11 | Pontos: 2</div>
+      <div class="barra-container">
+        <div class="barra" style="width:10%"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

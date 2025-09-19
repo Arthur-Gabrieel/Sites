@@ -1,0 +1,152 @@
+body { 
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: sans-serif;
+ }
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#top { 
+    position: absolute; 
+    width: 100%;
+    height: 50px;
+    background-color: #0871ad;
+    text-align: center;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#logoBasket {               /*Logo do site*/
+   width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    padding-left:10px;
+    margin-top: -24px;
+}
+.link_top{
+    margin-top: 20px;
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.link_top:hover{
+    color: rgb(179, 175, 175);
+    border-bottom: 5px solid rgb(119, 112, 112);
+}
+
+#title2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: calc(50vh - 60px);
+     margin: 0 auto; 
+     width: 100%;
+     color: rgb(119, 112, 112);
+     font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 100px;
+  position: relative;
+  top: 40px;
+  color: rgb(119, 112, 112);;
+  
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  background-color: #0871ad;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #055b8b;
+}
+
+#times-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Seção por conferência */
+.conferencia {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.conferencia h2 {
+  color: #0871ad;
+  border-bottom: 2px solid #0871ad;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+/* Divisão */
+.divisao {
+  margin-bottom: 20px;
+}
+
+.divisao h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Times */
+.times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+
+.time {
+  display: flex;
+  flex-direction: column;  /* ✅ empilha verticalmente */
+  align-items: center;     /* ✅ centraliza imagem e texto */
+  padding: 10px;
+  width: 140px;
+  background-color: #eee;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  margin-top: 20px;
+}
+
+
+.time:hover {
+  transform: scale(1.05);
+  background-color: #d6eaff;
+}
+
+.time img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px; /* Espaço entre logo e nome */
+}
+
+.time span {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
