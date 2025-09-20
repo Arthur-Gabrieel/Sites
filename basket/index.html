@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basket</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="icon"  href="img/LOGO.png" type="image/png">
     
 </head>
 <body>
     
-    
-
 <header id="top">
     <img  class="logoBasket" src="img/LOGO.png" alt="Logo">
 
@@ -46,19 +44,41 @@
                     </div>
                 </div>
                            <!-- Modal 1 -->
-                    <div class="modal">
-                        <div class="modalContent">
-                            <img class="imageModal" src="img/Stephen-Curry-Golden-State-Warriors-Dillon-Brooks-Memphis-Grizzlies-NBA-action-2022.webp"  alt="">
-                        <span class="buttonClose">&times;</span>
-                        <h2>Curry brilha mais uma vez!!!</h2>
-                        <p>Stefhen Curry voltou a mostrar por que é um dos maiores jogadores da NBA. Na partida de ontem, ele marcou pontos decisivos e conduziu seu time a uma vitória emocionante. Com sua precisão nos arremessos de três pontos e dribles rápidos, Curry fez a diferença desde o primeiro minuto, mantendo a torcida em êxtase.<br><br>
+<div class="modal">
+  <div class="modalContent">
 
-                        O atleta já acumula várias performances memoráveis nesta temporada, e mais uma vez reafirmou seu talento e liderança dentro de quadra. Após o jogo, Curry comentou sobre a importância do trabalho em equipe e destacou que cada vitória é fruto da dedicação de todos os companheiros.<br><br>
+   <div class="videoWrapper">
+  <video class="videoModal" id="videoPlayer">
+    <source src="video/0919 (1)(1).mp4" type="video/mp4" />
+    Seu navegador não suporta o elemento de vídeo.
+  </video>
 
-                        Com mais essa atuação, Stefhen Curry segue consolidando sua posição como referência no basquete mundial e promessa de grandes emoções para os fãs.</p>
+  <div class="videoControl">
+    <button id="playPause">▶️</button>
+    
+    <div class="timer" id="currentTime">00:00</div>
 
-                    </div>
-                </div>
+    <input type="range" id="progress" min="0" max="100" value="0" step="0.1" />
+    
+    <input type="range" id="volume" min="0" max="1" step="0.01" value="1" title="Volume" />
+  </div>
+
+  
+</div>
+
+    <span class="buttonClose" onclick="fecharModal()">&times;</span>
+
+    <h2>Curry brilha mais uma vez!!!</h2>
+    <p>
+      Stefhen Curry voltou a mostrar por que é um dos maiores jogadores da NBA. Na partida de ontem, ele marcou pontos decisivos e conduziu seu time a uma vitória emocionante. Com sua precisão nos arremessos de três pontos e dribles rápidos, Curry fez a diferença desde o primeiro minuto, mantendo a torcida em êxtase.<br><br>
+
+      O atleta já acumula várias performances memoráveis nesta temporada, e mais uma vez reafirmou seu talento e liderança dentro de quadra. Após o jogo, Curry comentou sobre a importância do trabalho em equipe e destacou que cada vitória é fruto da dedicação de todos os companheiros.<br><br>
+
+      Com mais essa atuação, Stefhen Curry segue consolidando sua posição como referência no basquete mundial e promessa de grandes emoções para os fãs.
+    </p>
+
+  </div>
+</div>
             </div>
                      
 
@@ -310,6 +330,6 @@
     
 </footer>
 
-<script src="index.js"></script>
+<script src="javaScript/index.js"></script>
 </body>
 </html>
